@@ -118,11 +118,21 @@ textarea {
        color: #FFE600; 
        font-family: 'Lato', sans-serif;
     }
-    h2, h3, h4, h5, .button, .label, h6 {
+    h2, h3, h4, h5, .button, .label, h6, a {
         font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
         padding: 0;
         margin: 0;
+    }
+    ul {
+        list-style-type: none;
+    }
+    a {
+        text-decoration: none;
+        border-bottom: solid 4px white;
+    }
+    a:hover {
+        border-color: #FFE600;
     }
     .button {
         border: solid 4px #FFE600;
@@ -277,9 +287,33 @@ textarea {
        left: 30px;
    }
 
+/* ==========================================================================
+Footer: "newsletter" section; bottom-nav/social media
+========================================================================== */
 
-
-
+/* bottom nav/social media---------------------------------*/
+.bottom-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    border: solid blue 2px;
+    align-items: stretch;
+}
+.bottom-nav li {
+    flex: 1;
+    border: solid red 2px;
+    position: relative;
+}
+.bottom-nav li a {
+    display: inline-block;
+    padding: 0 0 10px 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
 
 
 
