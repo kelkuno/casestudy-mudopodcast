@@ -154,10 +154,12 @@ textarea {
         background: #FFE600;
         color: #03284A;
     }
+    h2 {
+        font-size: 4.5em;
+    }
     h3 {
         font-size: 2.5em;
     }
-    
     h4, h5, h6 {
         color: white;
     }
@@ -290,6 +292,62 @@ textarea {
 /* ==========================================================================
 Footer: "newsletter" section; bottom-nav/social media
 ========================================================================== */
+/* newsletter section---------------------------------*/
+.newsletter {
+    background-image: url("../img/logos/pattern_yellow_blue.png");
+    background-repeat: repeat;
+    background-position: center center;
+    width: 100%;
+    height: 48vh;
+    position: relative;
+    color: #03284A;
+}
+.newsletter-content {
+    background: white;
+    border: solid 8px #03284A;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 75%;
+    height: 70%;
+    padding: 30px 0;
+}
+.newsletter-content p {
+    font-size: 1.5em;
+    padding: 0;
+    margin: 10px 160px;
+    line-height: 1.5em;
+}
+/* newsform styling------------------------*/
+form {
+    display: flex;
+    width: 62%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #03284A;
+}
+.newsletter-type-email {
+    flex: 3;
+    border: none;
+    margin: 4px;
+    padding: .8em 2em;
+}
+.newsletter-submit {
+    flex: 1;
+    background: white;
+    border: none;
+    margin: 4px 4px 4px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.newsletter-submit:hover {
+    background: #03284A;
+    color: white;
+}
 
 /* bottom nav/social media---------------------------------*/
 .bottom-nav {
@@ -298,12 +356,10 @@ Footer: "newsletter" section; bottom-nav/social media
     padding: 0;
     width: 100%;
     height: 100px;
-    border: solid blue 2px;
     align-items: stretch;
 }
 .bottom-nav li {
     flex: 1;
-    border: solid red 2px;
     position: relative;
 }
 .bottom-nav li a {
@@ -314,12 +370,6 @@ Footer: "newsletter" section; bottom-nav/social media
     transform: translate(-50%, -50%);
     position: absolute;
 }
-
-
-
-
-
-
 
 
 /* ==========================================================================

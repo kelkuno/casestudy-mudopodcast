@@ -116,16 +116,15 @@
   </section>
   <footer>
     <section class="newsletter">
-    <img src="img/logos/pattern_yellow_blue.png" alt="newsletter logo pattern">
-    <h2>A Newsletter</h2>
-    <p>Não percas absolutamente nada do que se está a passar</p>
-    <form action="my-form.php" method="post">
-        <p>Enviar <input type="email" name="email"></p>
-        <p>
-            <input type="submit" value="submit">
-        </p>
-    </form> 
-    </section>
+      <div class="newsletter-content">
+        <h2>A Newsletter</h2>
+        <p>Não percas absolutamente nada do que se está a passar</p>
+        <form action="my-form.php" method="post">
+          <input class="newsletter-type-email" type="email" name="email" placeholder="omeupreciosoemail@nospam.please">
+          <button class="newsletter-submit" type="submit" value="submit">Enviar</button>
+        </form><!--end of newsletter form-->
+      </div><!--end of newsletter-content-->
+    </section><!--end of newsletter section-->
     <aside class="social-media">
       <ul class="bottom-nav">
         <li><a href="#!"><h4>Email</h4></a></li>
