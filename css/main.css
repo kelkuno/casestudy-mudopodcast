@@ -124,6 +124,9 @@ textarea {
         padding: 0;
         margin: 0;
     }
+    section {
+        margin: 60px 0 0 0;
+    }
     em {
         text-decoration: line-through;
         font-style: normal;
@@ -238,6 +241,7 @@ textarea {
        width: 100%;
        height: 100vh;
        position: relative;
+       margin: 0;
    }
    .jumbotron {
         position: relative;
@@ -304,6 +308,107 @@ textarea {
        bottom: 20px;
        left: 30px;
    }
+/* mudo animation div----------*/
+.mudo-animation {
+    width: 160px;
+    height: 150px;
+    border: solid white 4px;
+    position: absolute;
+    z-index: 20;
+    bottom: 12%;
+    right: 18%;
+}
+.mudo-animation-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.mudo-animation h4, .mudo-animation h6 {
+    color: #FFE600;
+}
+.mudo-animation h4 {
+    font-size: 1.6em;
+    padding: 0 0 2em 0;
+}
+/* ==========================================================================
+   Section: "recent episodes"
+   ========================================================================== */
+.recent-episodes {
+    width: 750px;
+    position: relative;
+    margin: 0 0 0 125px;
+}
+.recent-episodes-header {
+    position: relative;
+}
+.recent-episodes-header .button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+/* 'episodes' articles -------------*/
+.episode-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.episodes {
+    display: flex;
+    flex-direction: column;
+    height: 590px;
+    width: 330px;
+    margin: 30px 22px 0 22px;
+}
+#bruno .episodes-img {
+    flex: 1;
+    background-image: url("../img/people/brunoamorim-960x540.jpg");
+    background-position: center center;
+    background-size: cover;
+    padding: 0 0 1.4em 0;
+}
+#ana .episodes-img {
+    flex: 1;
+    background-image: url("../img/people/analuisasilva-1920x1080.jpg");
+    background-position: center center;
+    background-size: cover;
+    padding: 0 0 1.4em 0;
+}
+/* episodes-content------------------------- */
+.episodes-content {
+    background: white;
+    flex: 1;
+    color: #03284A;
+    padding: 3em 30px 1em 2em;
+}
+.episodes-content p {
+    line-height: 1em;
+}
+.episodes-content p.paragraph-titles {
+    color: #03284A;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+.episodes-content .label {
+    font-size: 1em;
+    background-color: #c7c3ae;
+    margin: 0 0 30px 0;
+}
+.episodes-content .button {
+    color: #E54B4B;
+    border-color: #E54B4B;
+}
+.episodes-content .button:hover {
+    color: #03284A;
+    background: #E54B4B;
+}
+.icon-plus {
+    padding: 5px 20px;
+    margin: 0 0 0 10px;
+}
+
 /* ==========================================================================
    Section: "spaces"
    ========================================================================== */
