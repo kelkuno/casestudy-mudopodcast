@@ -224,6 +224,8 @@ textarea {
     }
     .nav-icon-open {
         background: #ffe600;
+        margin: 0;
+        padding: 0;
     }
     .main-nav {
         position: fixed;
@@ -338,9 +340,11 @@ textarea {
     width: 750px;
     position: relative;
     margin: 0 0 0 125px;
+    border: solid blue 1px;
 }
 .recent-episodes-header {
     position: relative;
+    border: solid pink 2px;
 }
 .recent-episodes-header .button {
     position: absolute;
@@ -352,13 +356,36 @@ textarea {
 .episode-container {
     display: flex;
     flex-wrap: wrap;
+    border: solid red 2px;
+    align-items: space-around;
+}
+.episode-container-overlay {
+    z-index: 20;
+    position: absolute;
+    height: 68vh;
+    width: 330px;
+}
+.label-container {
+    border: solid #E54B4B 10px;
+    width: 270px;
+    height: 270px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.episode-container-overlay .label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+   
 }
 .episodes {
     display: flex;
     flex-direction: column;
-    height: 590px;
+    border: solid green 3px;
+    height: 68vh;
     width: 330px;
-    margin: 30px 22px 0 22px;
 }
 #bruno .episodes-img {
     flex: 1;
@@ -376,7 +403,7 @@ textarea {
 }
 /* episodes-content------------------------- */
 .episodes-content {
-    background: white;
+    background: #D4D4D4;
     flex: 1;
     color: #03284A;
     padding: 3em 30px 1em 2em;
@@ -396,11 +423,19 @@ textarea {
     background-color: #c7c3ae;
     margin: 0 0 30px 0;
 }
-.episodes-content .button {
+.podcast-button-set {
+    border: solid yellow 2px;
+    display: inline-block;
+    left: 50%;
+    top: 515px;
+    transform: translateX(-50%);
+    position: relative;
+}
+.episode-container-overlay .button {
     color: #E54B4B;
     border-color: #E54B4B;
 }
-.episodes-content .button:hover {
+.episode-container-overlay .button:hover {
     color: #03284A;
     background: #E54B4B;
 }
