@@ -206,6 +206,9 @@ textarea {
         width: 90px;
         z-index: 1000;
     }
+    .award:hover {
+        opacity: .6;
+    }
     h1 {
         color: yellow;
         text-indent: -999px;
@@ -219,21 +222,37 @@ textarea {
         top: 15px;
         left: 10px;
         z-index: 1000;
-        margin: 0;
-        padding: 0;
+        width: 90px;
+        height: 78px;
+        display: block;
+        border: none;
     }
-    .nav-icon-open {
-        background: #ffe600;
-        margin: 0;
-        padding: 0;
-    }
-    .main-nav {
+    /* navigation icon----------------------------*/
+    .menuOpener{
+        background-color: #FFE600;
+        display: block;
+        padding: 15px 3px;
         position: fixed;
-        right: 30px;
-        top: 20px;
-        margin: 0;
-        padding: 0;
+        top: 30px;
+        right: 20px;
         z-index: 1000;
+        border: none;
+        
+    }
+    .line {
+        height: 4px;
+        width: 32px;
+        background-color: #03284A;
+        transform: rotate(-45deg);
+        border-radius: 2px;
+    }
+    .line.middle {
+        margin-left: 5px;
+        margin-top: 3px;
+    }
+    .line.bottom {
+        margin-top: 3px;
+        margin-left: 10px;
     }
 /* ==========================================================================
    Section: "upcoming-episode"
@@ -314,11 +333,14 @@ textarea {
 .mudo-animation {
     width: 160px;
     height: 150px;
-    border: solid white 4px;
+    border: solid yellow 1px;
     position: absolute;
     z-index: 20;
     bottom: 12%;
     right: 18%;
+}
+.mudo-animation::after {
+    border-bottom-color: white;
 }
 .mudo-animation-content {
     text-align: center;
@@ -370,6 +392,13 @@ textarea {
     width: 100%;
     display: flex;
     justify-content: left;
+}
+.episode:hover {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transform: rotateX(0deg) rotateY(20deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px);
 }
 .offset-episode {
     justify-content: right;
