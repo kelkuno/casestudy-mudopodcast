@@ -340,11 +340,9 @@ textarea {
     width: 750px;
     position: relative;
     margin: 0 0 0 125px;
-    border: solid blue 1px;
 }
 .recent-episodes-header {
     position: relative;
-    border: solid pink 2px;
 }
 .recent-episodes-header .button {
     position: absolute;
@@ -356,8 +354,7 @@ textarea {
 .episode-container {
     display: flex;
     flex-wrap: wrap;
-    border: solid red 2px;
-    align-items: space-around;
+    margin: 30px 0 0 0;
 }
 .episode-container-overlay {
     z-index: 20;
@@ -365,10 +362,13 @@ textarea {
     height: 68vh;
     width: 330px;
 }
+.episode {
+    flex: 1;
+}
 .label-container {
-    border: solid #E54B4B 10px;
     width: 270px;
     height: 270px;
+    border: solid #E54B4B 10px;
     position: absolute;
     top: 30px;
     left: 50%;
@@ -378,12 +378,11 @@ textarea {
     position: absolute;
     top: 15px;
     left: 15px;
-   
 }
 .episodes {
     display: flex;
     flex-direction: column;
-    border: solid green 3px;
+    position: relative;
     height: 68vh;
     width: 330px;
 }
@@ -424,7 +423,6 @@ textarea {
     margin: 0 0 30px 0;
 }
 .podcast-button-set {
-    border: solid yellow 2px;
     display: inline-block;
     left: 50%;
     top: 515px;
@@ -443,7 +441,6 @@ textarea {
     padding: 5px 20px;
     margin: 0 0 0 10px;
 }
-
 /* ==========================================================================
    Section: "spaces"
    ========================================================================== */
