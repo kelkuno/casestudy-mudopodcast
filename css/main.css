@@ -354,7 +354,8 @@ textarea {
 .episode-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 30px 0 0 0;
+    margin: 30px -19px 0 -19px;
+    position: relative;
 }
 .episode-container-overlay {
     z-index: 20;
@@ -363,7 +364,15 @@ textarea {
     width: 330px;
 }
 .episode {
-    flex: 1;
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 0 15px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+.offset-episode {
+    justify-content: right;
 }
 .label-container {
     width: 270px;
