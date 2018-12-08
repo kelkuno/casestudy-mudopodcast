@@ -141,6 +141,9 @@ textarea {
     a:hover {
         border-color: #FFE600;
     }
+    a.label {
+        border: none;
+    }
     .button {
         border: solid 4px #FFE600;
         padding: 5px 43px;
@@ -198,15 +201,16 @@ textarea {
 /* ==========================================================================
    Header: logo ; awards
    ========================================================================== */
-    .award {
+    .badge {
         position: fixed;
         display: block;
         right: 15px;
         top: 105px;
         width: 90px;
         z-index: 1000;
+        border: none;
     }
-    .award:hover {
+    .badge:hover {
         opacity: .6;
     }
     h1 {
@@ -333,27 +337,45 @@ textarea {
 .mudo-animation {
     width: 160px;
     height: 150px;
-    border: solid yellow 1px;
+    border: solid white 4px;
     position: absolute;
+    animation-name: enclose;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+    border: solid transparent 6px;
     z-index: 20;
     bottom: 12%;
-    right: 18%;
-}
-.mudo-animation::after {
-    border-bottom-color: white;
+    right: 18%;  
 }
 .mudo-animation-content {
     text-align: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    animation-name: opacity;
+    animation-fill-mode: backwards;
+    animation-duration: .5s;
+    animation-delay: 1s;
 }
-.mudo-animation h4, .mudo-animation h6 {
+.mudo-animation-content h4, .mudo-animation-content h6 {
     color: #FFE600;
 }
 .mudo-animation h4 {
     font-size: 1.6em;
     padding: 0 0 2em 0;
+}
+/* animation keyframes ----------*/
+@keyframes enclose {
+    0% {border-left-color: white;}
+    20% {border-top-color: white;}
+    40% {border-right-color:white;}
+    80% {border-bottom-color: white;}
+    100% {border-color: white;}
+   }
+@keyframes opacity {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 /* ==========================================================================
    Section: "recent episodes"
@@ -378,6 +400,7 @@ textarea {
     flex-wrap: wrap;
     margin: 30px -19px 0 -19px;
     position: relative;
+    perspective: 1000px;
 }
 .episode-container-overlay {
     z-index: 20;
@@ -392,13 +415,6 @@ textarea {
     width: 100%;
     display: flex;
     justify-content: left;
-}
-.episode:hover {
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-    transform: rotateX(0deg) rotateY(20deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px);
 }
 .offset-episode {
     justify-content: right;
